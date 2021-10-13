@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato';
+  color: white;
+}
+html {
+  font-size: 62.5%;
+  letter-spacing: 1px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.App {
+  background-color: #2D98DE;
+  height: auto;
+  display: grid;
+  justify-content: center;
+  font-size: 1.6em;
+
+  & .header {
+    &-container {
+      display: grid;
+      grid-template-columns: 4fr 1fr;
+      grid-template-rows: repeat(auto-fill, minmax(min-content, 150px));
+      align-items: end;
+
+      & .last-updated {
+        align-self: start;
+      }
+
+      @media screen and (max-width: 1200px) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    &-title {
+      font-size: 7.4em;
+      font-weight: 100;
+
+      &-live {
+        font-weight: normal;
+      }
+
+      @media screen and (max-width: 1200px) {
+        font-size: 4em;
+      }
+    }
+  }
+}
+
+.items-container {
+  margin-top: 2em;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: repeat(auto-fill, 7em);
+  grid-gap: 3em;
+
+  @media screen and (max-width: 1200px) {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 20em 10em;
+  grid-gap: 1em;
+
+  &-author-and-poll {
+    display: grid;
+    grid-template-rows: repeat(2, 4em);
+  }
+
+  &-title {
+    font-size: 2em;
+
+    @media screen and (max-width: 1200px) {
+      font-size: 1.6em;
+    }
+  }
+  &-image {
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    object-fit: contain;
+  }
+}
+
+.polling {
+  margin-top: .8em;
+  width: max-content;
+  height: min-content;
+  padding: .5em 1em;
+  background-color: #1972AA;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  border-radius: .2em;
+}
